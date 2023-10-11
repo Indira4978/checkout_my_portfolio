@@ -1,14 +1,68 @@
 * {
   box-sizing: border-box;
+  background-color: #A8A8A8;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  background-color: #A8A8A8;
+
 }
 
+.header {
+  display: flex;
+
+  background-color: #A8A8A8;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.my_name {
+  padding-left: 50px;
+  margin-right: auto;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #A8A8A8;
+  justify-content: flex-end;;
+}
+
+.nav-items {
+  font-size: 1rem;
+  color: black;
+  list-style: none;
+  display: inline-block;
+  padding: 0 10px;
+  background-color: #A8A8A8;
+
+}
+
+#a-nav {
+  color: black;
+}
+
+
+.hero {
+  background-image: url("../images/02-hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+
+}
+
+.hero h2 {
+  display:inline-block;
+  position: absolute;
+  top: 300px;
+  right: 10px;
+}
 h1,
 h2,
 h3,
