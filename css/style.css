@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background-color: #A8A8A8;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -10,51 +10,47 @@ body {
   padding: 10px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
-  background-color: #A8A8A8;
+  background-color: #fff;
 
 }
 
-.header {
-  display: flex;
-
-  background-color: #A8A8A8;
-  padding-left: 10px;
-  align-items: center;
+header {
+  background-color: #83618C;
+  color: #fff;
+  padding: 10px;
 }
 
-.my_name {
-  padding-left: 50px;
-  margin-right: auto;
+.navbar h1 {
+  background-color: #83618C; 
+  padding: 10px; 
+  margin-left: -50px;
 }
 
-.top-nav {
+.navbar {
   display: flex;
   justify-content: space-around;
-  background-color: #A8A8A8;
-  justify-content: flex-end;;
+  align-items: center; 
+  text-align: center; 
+  background-color: #83618C;
 }
 
-.nav-items {
-  font-size: 1rem;
-  color: black;
-  list-style: none;
-  display: inline-block;
-  padding: 0 10px;
-  background-color: #A8A8A8;
 
+.navbar a {
+  background-color: #83618C;
+  text-decoration: none;
+  color: #22262E;
+  padding: 10px 20px;
 }
 
-#a-nav {
-  color: black;
+.navbar a:hover {
+  background-color: #CFC7D9;
 }
-
 
 .hero {
   background-image: url("../images/02-hero-bg.jpg");
   background-size: cover;
   background-position: center;
   height: 300px;
-
 }
 
 .hero h2 {
@@ -63,6 +59,8 @@ body {
   top: 300px;
   right: 10px;
 }
+
+
 h1,
 h2,
 h3,
@@ -74,4 +72,27 @@ h6 {
 
 p {
   margin: 0;
+}
+
+.page-wrapper {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: 25% 50% 25%;
+  grid-template-areas: 
+  "page-section-about page-section-about"
+  "page-section-work page-section-work"
+  "page-section-contact page-section-contact"
+}
+
+.page-section-about {
+  grid-area: page-section-about;
+}
+
+.page-section-work {
+  grid-area: page-section-work;
+}
+
+.page-section-contact {
+  grid-area: page-section-contact;
 }
