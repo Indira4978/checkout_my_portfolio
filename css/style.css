@@ -75,20 +75,32 @@ p {
 }
 
 .page-wrapper {
-  margin-top: 30px;
+  padding: 10px;
+  display: flex;
+  height: 800px;
+  background: #CFC7D9;
+  flex-direction: column;
+}
+
+.work-grid {
   display: grid;
-  grid-template-columns: 25% 75%;
-  grid-template-rows: 25% 50% 25%;
-  grid-template-areas: 
-  "page-section-about page-section-about"
-  "page-section-work page-section-work"
-  "page-section-contact page-section-contact"
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "page-section-about bio-text bio-text"
+    "page-section-work page-section-work";
 }
 
 .page-section-about {
   grid-area: page-section-about;
 }
 
+.bio-text {
+  grid-area: bio-text;
+}
+.page-section-about p {
+  grid-area: about-p;
+}
 .page-section-work {
   grid-area: page-section-work;
 }
