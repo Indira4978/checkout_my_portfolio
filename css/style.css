@@ -14,39 +14,58 @@ body {
 
 }
 
-header {
-  background-color: #83618C;
-  color: #fff;
-  padding: 10px;
+.wrapper{
+  margin: 0 auto;
+  width: 1000px;
 }
 
-.navbar h1 {
-  background-color: #83618C; 
-  padding: 10px; 
-  margin-left: -50px;
-}
-
-.navbar {
+.header-main {
   display: flex;
-  justify-content: space-around;
+  width: 100%;
+  height: 120px;
+  background-color: #fff;
+  justify-content: space-between;
+}
+
+.header-main-name {
+  display: flex;
+  width: 40%;
+  height: 100%;
+  align-items: center; 
+  text-align: center;
+  background-color: yellow;
+}
+
+.header-main-name h1 {
+  padding-left: 25px;
+}
+.header-main-nav {
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center; 
   text-align: center; 
-  background-color: #83618C;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
 }
 
-
-.navbar a {
-  background-color: #83618C;
-  text-decoration: none;
-  color: #22262E;
-  padding: 10px 20px;
+.header-main-nav a {
+  background-color: blue;
+  color: #fff;
 }
 
-.navbar a:hover {
-  background-color: #CFC7D9;
+.header-main-nav li {
+  list-style-type: none;
+  display: inline; 
+  font-size: medium;
+  padding: 20px 20px;
+
 }
+
 
 .hero {
+  margin-top: 10px;
   background-image: url("../images/02-hero-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -57,54 +76,110 @@ header {
   display:inline-block;
   position: absolute;
   top: 300px;
-  right: 10px;
+  right: 200px;
 }
 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-.page-wrapper {
-  padding: 10px;
-  display: flex;
-  height: 800px;
-  background: #CFC7D9;
-  flex-direction: column;
-}
-
-.work-grid {
+.main-grid-container {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
-  grid-template-rows: 1fr 1fr 1fr;
+  max-width: 1000px;
+  margin-top: 10px;
+  margin-right: 0;
+  margin-left: 10px;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-auto-rows:minmax(100px, auto); */
   grid-template-areas:
-    "page-section-about bio-text bio-text"
-    "page-section-work page-section-work";
+  "about-me content content"
+  "work project-1 project-1"
+  ". project-2 project-3"
+  ". project-4 project-5"
+  "contact-me email phone-number"
+  ". LinkedIn Instagram";
 }
 
-.page-section-about {
-  grid-area: page-section-about;
+.about-me {
+  grid-area: about-me;
+  height: 60px;
+  background-color: red;
+  border: 5px;
 }
 
-.bio-text {
-  grid-area: bio-text;
-}
-.page-section-about p {
-  grid-area: about-p;
-}
-.page-section-work {
-  grid-area: page-section-work;
+.content {
+  grid-area: content;
+  height: fit-content;
+  background-color: blue;
 }
 
-.page-section-contact {
-  grid-area: page-section-contact;
+.work {
+  grid-area: work;
+  height: 100px;
+  background-color: blue;
+}
+
+
+.project-1 {
+  grid-area: project-1;
+  height: 100px;
+  background-color: purple;
+}
+
+.project-2 {
+  grid-area: project-2;
+  height: 60px;
+  background-color: black;
+}
+
+
+.project-3 {
+  grid-area: project-3;
+  height: 60px;
+  background-color: blue;
+}
+
+.project-4 {
+  grid-area: project-4;
+  height: 60px;
+  background-color: orange;
+}
+
+.project-5 {
+  grid-area: project-5;
+  height: 60px;
+  background-color: yellow;
+}
+
+.contact-me {
+  grid-area: contact-me;
+  height: 60px;
+  background-color: yellow;
+}
+
+.contact-details {
+  grid-area: contact-details;
+  height: 60px;
+  background-color: yellow;
+}
+
+.email {
+  grid-area: email;
+  height: 60px;
+  background-color: yellow;
+}
+
+.phone-number {
+  grid-area: phone-number;
+  height: 60px;
+  background-color: yellow;
+}
+
+.LinkedIn {
+  grid-area: contact-details;
+  height: 60px;
+  background-color: yellow;
+}
+
+.Instagram {
+  grid-area: contact-details;
+  height: 60px;
+  background-color: yellow;
 }
